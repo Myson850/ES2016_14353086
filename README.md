@@ -47,7 +47,7 @@ The distributed operation layer (DOL) is a software development framework to pro
 	* cd dol/build/lib/main
 * 然后打开runexample.xml查看结果是否为build successful。
 	* sudo ant -f runexample.xml -Dnumber=1
- 
+ ```
 
 ##实验感想与实验心得
 
@@ -56,6 +56,4 @@ The distributed operation layer (DOL) is a software development framework to pro
 1.刚开始的时候忘记更改systemc的当前工作路径，只注意了后面的2.3.1然后就按照ppt上面的打进去就一直报错浪费了很久时间。
 2.忘记更改linux为64位。
 3.在本机上使用的时候忘记给仓库我的用户名和邮箱，也一直报错。
-相对于这些，markdown的使用我觉得也还行，只要看些模板就能使用基本的操作。
-
-```
+相对于这些，markdown的使用我觉得也还行，只要看些模板就能使用基本的操作。```
