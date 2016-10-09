@@ -5,16 +5,40 @@ qaq
 ```
 
 ##DOL安装笔记
-* 方便的`导入导出`功能
-    *  直接把一个markdown的文本文件拖放到当前这个页面就可以了
-    *  导出为一个html格式的文件，样式一点也不会丢失
-* 编辑和预览`同步滚动`，所见即所得（右上角设置）
-* `VIM快捷键`支持，方便vim党们快速的操作 （右上角设置）
-* 强大的`自定义CSS`功能，方便定制自己的展示
-* 有数量也有质量的`主题`,编辑器和预览区域
-* 完美兼容`Github`的markdown语法
-* 预览区域`代码高亮`
-* 所有选项自动记忆
+* 首先创建一个一个名为DOL的文件夹。
+	* mkdir dol
+* 将`dolethz.zip`解压到dol文件中。
+	* unzip dol_ethz.zip -d -dol
+* 进入dol文件夹
+	* cd dol
+* 在systemc-2.3.1中查看当前的工作路径
+	* pwd
+* 在文件夹dol中找到build_zip.xml这个文件用gedit打开然后找到下面这段话，就是说上面编译的systemc位置在哪里，
+	<property name="systemc.inc" value="YYY/include"/>
+	<property name="systemc.lib" value="YYY/lib-linux/libsystemc.a"/>
+把YYY改成上页pwd的结果（注意，对于  64位 系统的机器，lib-linux要改成lib-linux64）
+* 然后编译这个文件
+	* ant -f build_zip.xml all
+* 等显示build successful的时候打开文件夹dol中的build中的lib中的main中的runexample.xml，将找到的
+ ```<tstamp>
+      <format property="touch.time"
+              pattern="MM/dd/yyyy hh:mm aa"
+              offset="-5" unit="second"/>
+    </tstamp>
+    <touch datetime="${touch.time}">
+      <fileset dir="example${number}"/>
+    </touch>```
+
+修改为：
+```<!--     <tstamp>
+      <format property="touch.time"
+              pattern="MM/dd/yyyy hh:mm aa"
+              offset="-5" unit="second"/>
+    </tstamp>
+    <touch datetime="${touch.time}">
+      <fileset dir="example${number}"/>
+    </touch> -->```
+
 
 ##实验感想与实验心得
 ????
