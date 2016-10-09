@@ -50,6 +50,7 @@ The distributed operation layer (DOL) is a software development framework to pro
  
 
 ##实验感想与实验心得
+
 ```
 这次实验配置过程中配置dol和仓库的过程出现了很多问题。
 1.刚开始的时候忘记更改systemc的当前工作路径，只注意了后面的2.3.1然后就按照ppt上面的打进去就一直报错浪费了很久时间。
