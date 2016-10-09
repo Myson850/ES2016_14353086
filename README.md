@@ -48,6 +48,7 @@ The distributed operation layer (DOL) is a software development framework to pro
 * 然后打开runexample.xml查看结果是否为build successful。
 	* sudo ant -f runexample.xml -Dnumber=1
  
+
 ##实验感想与实验心得
 ```
 这次实验配置过程中配置dol和仓库的过程出现了很多问题。
